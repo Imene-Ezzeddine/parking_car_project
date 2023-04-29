@@ -40,6 +40,8 @@ def process_video():
     step = 30
     while ret:
         ret, frame = cap.read()
+        if frame is None:
+            break
 
         if frame_nmr % step == 0 and previous_frame is not None:
             for spot_index, spot in enumerate(spots):
