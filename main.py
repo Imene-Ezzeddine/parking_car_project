@@ -4,11 +4,6 @@ import time
 import cv2
 import numpy as np
 from utile import get_parking_spots_bboxes, empty_or_not
-import gdown
-
-f = st.file_uploader("Upload file")
-tfile = tempfile.NamedTemporaryFile(delete=False)
-tfile.write(f.read())
 
 # creating an empty place-holder for displaying video frames
 st.title("MALL PARKING LOT AREA CONTROLLER")
@@ -24,7 +19,7 @@ def process_video():
         return np.abs(np.mean(im1) - np.mean(im2))
 
     mask = './mask_1920_1080.png'
-    video_path = tfile
+    video_path = './parking_1920_1080.mp4'
 
     mask = cv2.imread(mask, 0)
 
