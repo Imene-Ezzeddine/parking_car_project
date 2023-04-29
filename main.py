@@ -10,8 +10,6 @@ from utile import get_parking_spots_bboxes, empty_or_not
 st.title("MALL PARKING LOT AREA CONTROLLER")
 st.header("please hit the button if you are looking for an empty parking spot")
 
-import os
-os.chdir("C:/Users/dell/PycharmProjects/parking_car_project")
 
 video_placeholder = st.empty()
 text_empty = st.empty()
@@ -21,8 +19,8 @@ def process_video():
     def calc_diff(im1, im2):
         return np.abs(np.mean(im1) - np.mean(im2))
 
-    mask = 'C:/Users/dell/PycharmProjects/parking_car_project/mask_1920_1080.png'
-    video_path = 'C:/Users/dell/PycharmProjects/parking_car_project/parking_1920_1080_loop.mp4'
+    mask = './mask_1920_1080.png'
+    video_path = './parking_1920_1080_loop.mp4'
 
     mask = cv2.imread(mask, 0)
 
