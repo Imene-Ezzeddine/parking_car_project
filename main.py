@@ -20,7 +20,7 @@ def process_video():
         return np.abs(np.mean(im1) - np.mean(im2))
 
     mask = './mask_1920_1080.png'
-    video_path = 'https://drive.google.com/file/d/1lz3ydKaCUuj6E63skH5hJ3vCLL1r9n0S/view?usp=sharing'
+    video_path = 'https://drive.google.com/drive/folders/1QPHknNg-CiKVVOjObRVaRnUA1I-GlL4H'
 
     mask = cv2.imread(mask, 0)
 
