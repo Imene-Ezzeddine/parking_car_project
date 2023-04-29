@@ -11,7 +11,7 @@ st.title("MALL PARKING LOT AREA CONTROLLER")
 st.header("please hit the button if you are looking for an empty parking spot")
 
 import os
-os.chdir(C:/Users/dell/PycharmProjects/parking_car_project)
+os.chdir("C:/Users/dell/PycharmProjects/parking_car_project")
 
 video_placeholder = st.empty()
 text_empty = st.empty()
