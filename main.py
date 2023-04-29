@@ -4,7 +4,12 @@ import time
 import cv2
 import numpy as np
 from utile import get_parking_spots_bboxes, empty_or_not
+import gdown
 
+url = 'https://drive.google.com/uc?id=1lz3ydKaCUuj6E63skH5hJ3vCLL1r9n0S'
+output = 'video.mp4'
+
+gdown.download(url, output, quiet=False)
 
 # creating an empty place-holder for displaying video frames
 st.title("MALL PARKING LOT AREA CONTROLLER")
@@ -20,7 +25,7 @@ def process_video():
         return np.abs(np.mean(im1) - np.mean(im2))
 
     mask = './mask_1920_1080.png'
-    video_path = 'https://drive.google.com/drive/folders/1QPHknNg-CiKVVOjObRVaRnUA1I-GlL4H'
+    video_path = './parking_1920_1080_loop.mp4'
 
     mask = cv2.imread(mask, 0)
 
